@@ -1,0 +1,109 @@
+/* styles.css */
+:root {
+  --bg: #f9f9fc;
+  --text: #1a1a2e;
+  --card: #ffffff;
+  --shadow: 0 4px 20px rgba(0,0,0,0.07);
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 32px 16px;
+  min-height: 100vh;
+  transition: background 0.5s, color 0.5s;
+}
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.4rem;
+  color: #0f3460;
+  margin-bottom: 1.5rem;
+  transition: color 0.4s;
+  user-select: none;
+}
+
+.text-block {
+  background: var(--card);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  margin: 32px 0;
+  min-height: 120px;
+  transition: all 0.35s ease;
+  line-height: 1.6;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  color: white;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.primary  { background: #4361ee; }
+.primary:hover  { background: #3f37c9; }
+
+.success  { background: #4cc9f0; }
+.success:hover  { background: #4895ef; }
+
+.danger   { background: #f72585; }
+.danger:hover   { background: #d0006e; }
+
+.warning  { background: #ff9f1c; }
+.warning:hover  { background: #ff8500; }
+
+.hidden {
+  display: none !important;
+}
+
+.active {
+  outline: 3px solid #4361ee;
+  outline-offset: 4px;
+  box-shadow: 0 0 0 6px rgba(67,97,238,0.18);
+}
+
+/* ────────────── Тёмная тема ────────────── */
+body.dark {
+  --bg: #0d1117;
+  --text: #c9d1d9;
+  --card: #161b22;
+  --shadow: 0 6px 24px rgba(0,0,0,0.6);
+}
+
+body.dark h1 {
+  color: #58a6ff;
+}
+
+body.dark .active {
+  outline-color: #58a6ff;
+  box-shadow: 0 0 0 6px rgba(88,166,255,0.25);
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Лаба 6 — DOM</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 id="main-title">Лабораторная 6. DOM-страдания</h1>
+
+    <div class="text-block" id="content">
+      <p id="main-text">
+        Здесь был какой-то важный текст... но мы его сейчас уничтожим через JS.
+      </p>
+      <p>Много способов сломать страницу одним кликом.</p>
+    </div>
+
+    <div class="controls">
+      <button class="btn primary" onclick="changeTitle()">Сжечь заголовок</button>
+      <button class="btn success" onclick="makeTextRed()">Поменять текст</button>
+      <button class="btn danger" onclick="toggleHide()">Спрятать / Вытащить этот кусок</button>
+      <button class="btn warning" onclick="toggleHighlight()">Обвести как будто важно</button>
+      <button class="btn primary" onclick="toggleTheme()">Сменить тему</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
